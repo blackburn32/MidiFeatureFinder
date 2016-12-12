@@ -1,4 +1,3 @@
-import org.jfugue.midi.MidiDictionary;
 import org.jfugue.midi.MidiParser;
 import org.jfugue.parser.ParserListenerAdapter;
 import org.jfugue.theory.Chord;
@@ -60,7 +59,6 @@ class NoteCountParserListener extends ParserListenerAdapter {
             case("G"):g++;break;
             case("Gb"):gflat++;break;
         }
-
         //System.out.println(Note.getDurationString(note.getDuration()));
         count++;
     }
