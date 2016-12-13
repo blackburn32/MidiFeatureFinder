@@ -137,35 +137,35 @@ class NoteCountParserListener extends ParserListenerAdapter {
     
     private void majorityNoteDurationAndSupermajority(StringBuilder featureString) {
         // majority features go: w h q hdot qdot
-    	// supermajority features (half or more): w h q hdot qdot
+    	// supermajority features (more than half): w h q hdot qdot
         int majorityNoteDurationCount = majorityNoteDuration();
         int maj = count/2;
         if (w==majorityNoteDurationCount) { 
         	featureString.append(1); featureString.append(0); featureString.append(0); featureString.append(0); featureString.append(0);
-        	if (w>=maj) {
+        	if (w>maj) {
         		featureString.append(1); featureString.append(0); featureString.append(0); featureString.append(0); featureString.append(0);
         	}
         }
         else if (h==majorityNoteDurationCount) { 
         	featureString.append(0); featureString.append(1); featureString.append(0); featureString.append(0); featureString.append(0);
-    		if (h>=maj) {
+    		if (h>maj) {
     			featureString.append(0); featureString.append(1); featureString.append(0); featureString.append(0); featureString.append(0);
     		}
     	}
         else if (q==majorityNoteDurationCount) { 
         	featureString.append(0); featureString.append(0); featureString.append(1); featureString.append(0); featureString.append(0);
-    		if (q>=maj) {
+    		if (q>maj) {
     			featureString.append(0); featureString.append(0); featureString.append(1); featureString.append(0); featureString.append(0);
     		}
     	}
         else if (hdot==majorityNoteDurationCount) { 
         	featureString.append(0); featureString.append(0); featureString.append(0); featureString.append(1); featureString.append(0);
-    		if (hdot>=maj) {
+    		if (hdot>maj) {
     			featureString.append(0); featureString.append(0); featureString.append(0); featureString.append(1); featureString.append(0);
     		}
     	}
         else { featureString.append(0); featureString.append(0); featureString.append(0); featureString.append(0); featureString.append(1);
-    		if (qdot>=maj) {
+    		if (qdot>maj) {
     			featureString.append(0); featureString.append(0); featureString.append(0); featureString.append(0); featureString.append(1);
     			}
     	}
