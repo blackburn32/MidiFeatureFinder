@@ -137,7 +137,7 @@ class NoteCountParserListener extends ParserListenerAdapter {
     
     private void majorityNoteDurationAndSupermajority(StringBuilder featureString) {
         // majority features go: w h q hdot qdot
-    	// supermajority featdures (more than half): w h q hdot qdot
+    	// supermajority fe\atures (more than half): w h q hdot qdot
         int majorityNoteDurationCount = majorityNoteDuration();
         int maj = count/2;
         if (w==majorityNoteDurationCount) { 
